@@ -1,0 +1,10 @@
+{
+  "name": "alirsn-web",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "*",
+    "d3": "*",
+    "jsroot": "https://github.com/linev/jsroot.git#dev"
+  }
+}

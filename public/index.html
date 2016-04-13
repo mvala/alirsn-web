@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ALICE RSN Output">
+    <meta name="author" content="Martin Vala">
+    <title>ALICE RSN Output</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/d3/d3.js"></script>
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <!-- here ?bower flag indicates that we are working with bower installed scripts, JSROOT will use libraries from bower -->
+    <script src="vendor/jsroot/scripts/JSRootCore.js?bower&jq2d&onload=createGUI" type="text/javascript"></script>
+
+    <!-- Main -->
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+    <my-app>Loading...</my-app>
+</body>
+
+
+</html>

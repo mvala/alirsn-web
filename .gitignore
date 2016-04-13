@@ -25,9 +25,16 @@ build/Release
 
 # Dependency directory
 node_modules
+bower_components
 
 # Optional npm cache directory
 .npm
 
 # Optional REPL history
 .node_repl_history
+
+public/app/*.js
+public/app/*.js.map
+public/app/jsroot/*.js
+public/app/jsroot/*.js.map
+typings
