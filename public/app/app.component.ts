@@ -1,16 +1,12 @@
-import {
-    Component
-} from 'angular2/core';
-import {
-    JSROOTCanvasComponent
-} from './jsroot/canvas.component';
+import {Component} from 'angular2/core';
+import {RsnSpectraComponent} from './rsn/rsn.spectra.component'
 
 @Component({
-    selector: 'my-app',
-    directives: [JSROOTCanvasComponent],
+    selector: 'alice-app',
+    directives: [RsnSpectraComponent],
     template: `
 <h1>ALICE RSN web</h1>
-<jsroot-canvas [id]='"2"'></jsroot-canvas>
+<rsn-spectra></rsn-spectra>
 `
 })
 export class AppComponent {}

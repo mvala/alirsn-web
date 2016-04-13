@@ -36,9 +36,9 @@ System.import('app/main')
 
 
 function createGUI() {
-    var h = new JSROOT.HierarchyPainter("example", "myTreeDiv");
+    var h = new JSROOT.HierarchyPainter("alirsn", "tree");
 
-    h.SetDisplay("simple", "fit_draw"); // can be also "grid2x2" or "collapsible" or "tabs"
+    h.SetDisplay("simple", "fit"); // can be also "grid2x2" or "collapsible" or "tabs"
 
     // one could use absolute path here like http://jsroot.gsi.de/files/hsimple.root
     //h.OpenRootFile("http://alieos.saske.sk:8000/eos/alike.saske.sk/alice/alike/PWGLF/LF_pp/389_20160307-1141/merge_runlist_4/AnalysisResults.root", function() {
@@ -48,7 +48,7 @@ function createGUI() {
     //    h.display("pt/data/results/norm[1.10,1.15]/fit_0[0.997,1.050]/hCorrBC");
     //h.display("hpx;1", "hist");
 
-    var timeoutBinChanged = 0;
+    var timeoutBinChanged = 100;
     JSROOT.gStyle.AutoStat = false;
     var optFit = 1111;
     JSROOT.gStyle.StatNDC = {
@@ -82,7 +82,7 @@ function createGUI() {
                     //obj.fLineColor = i + 1;
                     //obj.fMarkerColor = i + 1;
                     obj.fTitle = prefix[1];
-                    var painter = JSROOT.redraw('myMainDiv', obj, "");
+                    var painter = JSROOT.redraw('spectra', obj, "");
                     painter.ConfigureUserTooltipCallback(function(info) {
                         if (info == null) {
                             // one could clear previous draw
@@ -91,7 +91,7 @@ function createGUI() {
                             return;
                         }
                         //console.log(info);
-                        JSROOT.cleanup("fit_draw");
+                        JSROOT.cleanup("fit");
                         // set tooltip info
                         //console.log("object " + info.name + "  bin " + info.bin + "  cont " + info.cont);
                         //console.log(obj2.fKeys[info.bin].fName);
@@ -103,7 +103,7 @@ function createGUI() {
                             obj3.fTitle = list.fKeys[info.bin].fName;
                             JSROOT.gStyle.OptFit = optFit;
                             JSROOT.gStyle.AutoStat = true;
-                            JSROOT.redraw("fit_draw", obj3);
+                            JSROOT.redraw("fit", obj3);
                         });
                     }, timeoutBinChanged);
                 });

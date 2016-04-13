@@ -35,6 +35,8 @@ bower_components
 
 public/app/*.js
 public/app/*.js.map
-public/app/jsroot/*.js
-public/app/jsroot/*.js.map
+public/app/*/*.js
+public/app/*/*.js.map
 typings
+
+public/test/*.root
